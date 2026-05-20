@@ -6,6 +6,12 @@ function convertDocToForm() {
   
   var form = FormApp.create(doc.getName());
   form.setIsQuiz(true);
+  form.setCollectEmail(true);
+  form.setPublishingSummary(false);       
+  form.setShowLinkToRespondAgain(false)
+
+  // Quiz feedback settings
+  form.setRevealCorrectAnswers(false); 
   
   var paragraphs = body.getParagraphs();
   
